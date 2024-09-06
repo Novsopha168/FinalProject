@@ -1,0 +1,15 @@
+version: "3.8"
+
+volumes:
+  vol-sbc10:
+services:
+  lms11-postgres:
+    image: "postgres:16.3-bullseye"
+    container_name: "lms11-postgres"
+    ports:
+      - "9999:5432"
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: qwerqwer
+      POSTGRES_USER: lms11
+      POSTGRES_DB: DB_lms11
